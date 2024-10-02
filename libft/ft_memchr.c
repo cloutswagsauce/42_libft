@@ -6,7 +6,7 @@
 /*   By: lfaria-m <lfaria-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 12:40:29 by lfaria-m          #+#    #+#             */
-/*   Updated: 2024/10/02 12:53:53 by lfaria-m         ###   ########.fr       */
+/*   Updated: 2024/10/02 16:08:14 by lfaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (n > 0)
 	{
 		if (*s1 == a)
-			return (s);
+			return ((void *) s);
 		s1 ++;
 	}
 	return (0);

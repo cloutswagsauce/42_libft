@@ -6,7 +6,7 @@
 /*   By: lfaria-m <lfaria-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 14:03:47 by lfaria-m          #+#    #+#             */
-/*   Updated: 2024/10/02 11:59:34 by lfaria-m         ###   ########.fr       */
+/*   Updated: 2024/10/02 16:08:27 by lfaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,19 @@ void	*memmove(void *dst, const void *src, size_t len)
 	{
 		len --;
 		while (len > 0 && source[len])
-			dest[len--] = source[len--];
+		{
+			dest[len] = source[len];
+			len --;
+		}
+			
 	}
 	else
 	{
 		while (source[i] && i < len)
-			dest[i++] = source[i++];
+		{
+			dest[i] = source[i];
+			i ++;
+		}
 	}
 	return (dst);
 }

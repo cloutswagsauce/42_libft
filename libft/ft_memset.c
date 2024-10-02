@@ -6,7 +6,7 @@
 /*   By: lfaria-m <lfaria-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 12:00:51 by lfaria-m          #+#    #+#             */
-/*   Updated: 2024/10/02 12:13:35 by lfaria-m         ###   ########.fr       */
+/*   Updated: 2024/10/02 16:08:31 by lfaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*memset(void *b, int c, size_t len)
 {
-	int		i;
+	size_t	i;
 	char	*ptr;
 
 	i = 0;
