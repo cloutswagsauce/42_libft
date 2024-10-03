@@ -6,7 +6,7 @@
 /*   By: lfaria-m <lfaria-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 12:56:48 by lfaria-m          #+#    #+#             */
-/*   Updated: 2024/10/02 14:05:23 by lfaria-m         ###   ########.fr       */
+/*   Updated: 2024/10/03 17:46:50 by lfaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (n > 0)
 	{
 		if (*s3 != *s4)
-			return (*s3 - *s4);
+			return ((unsigned char)*s3 - (unsigned char)*s4);
+		s3 ++;
+		s4 ++;
+		n --;
 	}
 	return (0);
 }

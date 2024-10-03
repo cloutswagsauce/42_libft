@@ -9,17 +9,10 @@
 /*   Updated: 2024/10/01 11:21:44 by lfaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-static int	ft_strlen(char *str)
-{
-	int	i;
 
-	i = 0;
-	while (str[i])
-		i ++;
-	return (i);
-}
+#include "libft.h"
 
-char	*ft_strchr(char *str, char c)
+char	*ft_strchr(const char *str, int c)
 {
 	int	i;
 
@@ -27,12 +20,12 @@ char	*ft_strchr(char *str, char c)
 	if (c == '\0')
 	{
 		i = ft_strlen(str);
-		return (str + i);
+		return ((char *)str + i);
 	}
 	while (str[i])
 	{
 		if (str[i] == c)
-			return (str + i);
+			return ((char *)str + i);
 		i ++;
 	}
 	return (0);

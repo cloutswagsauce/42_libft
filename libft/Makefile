@@ -6,7 +6,7 @@ OBJS = $(SRCS:.c=.o)
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -arch arm64
+CFLAGS = -Wall -Wextra -Werror
 
 HEADER = libft.h 
 
