@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lfaria-m <lfaria-m@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lfaria-m <lfaria-m@student.42lausanne.ch>    +#+  +:+       +#+      */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/01 12:00:51 by lfaria-m          #+#    #+#             */
-/*   Updated: 2024/10/02 16:08:31 by lfaria-m         ###   ########.fr       */
+/*   Created: 2024/10/02 22:25:13 by lfaria-m          #+#    #+#             */
+/*   Updated: 2024/10/02 22:25:19 by lfaria-m         ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t	i;
 	char	*ptr;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lfaria-m <lfaria-m@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lfaria-m <lfaria-m@student.42lausanne.ch>    +#+  +:+       +#+      */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/01 14:03:47 by lfaria-m          #+#    #+#             */
-/*   Updated: 2024/10/02 16:08:27 by lfaria-m         ###   ########.fr       */
+/*   Created: 2024/10/03 11:50:28 by lfaria-m          #+#    #+#             */
+/*   Updated: 2024/10/03 12:06:05 by lfaria-m         ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,25 @@
 
 void	*memmove(void *dst, const void *src, size_t len)
 {
-	char	*dest;
-	char	*source;
-	size_t	i;
+	int	i;
 
 	if (!dst || !src)
 		return (0);
-	dest = (char *)dst;
-	source = (char *)src;
-	i = 0;
 	if (dst > src)
 	{
-		len --;
-		while (len > 0 && source[len])
+		i = (int)len - 1;
+		while (i >= 0)
 		{
-			dest[len] = source[len];
-			len --;
+			*(char *)(dst + i) = *(char *)(src + i);
+			i --;
 		}
-			
 	}
 	else
 	{
-		while (source[i] && i < len)
+		i = 0;
+		while (i < (int)len)
 		{
-			dest[i] = source[i];
+			*(char *)(dst + i) = *(char *)(src + i);
 			i ++;
 		}
 	}
