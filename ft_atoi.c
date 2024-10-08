@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lfaria-m <lfaria-m@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lfaria-m <lfaria-m@student.42lausanne.ch>    +#+  +:+       +#+      */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/02 14:52:56 by lfaria-m          #+#    #+#             */
-/*   Updated: 2024/10/02 16:08:24 by lfaria-m         ###   ########.fr       */
+/*   Created: 2024/10/08 18:07:33 by lfaria-m          #+#    #+#             */
+/*   Updated: 2024/10/08 18:07:37 by lfaria-m         ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 static int	isspace(char a)
 {
 	if (a == '\t' || a == '\n' || a == '\v' || a == '\f' || a == '\r')

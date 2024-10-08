@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lfaria-m <lfaria-m@student.42lausanne.ch>    +#+  +:+       +#+      */
+/*   By: lfaria-m <lfaria-m@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 13:23:01 by lfaria-m          #+#    #+#             */
-/*   Updated: 2024/10/08 13:23:05 by lfaria-m         ###   ########.ch       */
+/*   Created: 2024/10/08 18:34:58 by lfaria-m          #+#    #+#             */
+/*   Updated: 2024/10/08 18:34:58 by lfaria-m         ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ char	*ft_word(char const *s, char c)
 	char	*word;
 	int		word_len;
 
+	if (!s)
+		return (0);
 	word_len = 0;
 	while (s[word_len] && s[word_len] != c)
 		word_len ++;
