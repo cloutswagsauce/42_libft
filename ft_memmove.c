@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lfaria-m <lfaria-m@student.42lausanne.ch>    +#+  +:+       +#+      */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/04 16:44:35 by lfaria-m          #+#    #+#             */
-/*   Updated: 2024/10/04 16:44:38 by lfaria-m         ###   ########.ch       */
+/*   Created: 2024/10/08 09:34:37 by lfaria-m          #+#    #+#             */
+/*   Updated: 2024/10/08 09:34:43 by lfaria-m         ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	int	i;
 
 	if (!dst && !src && len)
-		return (0); // No need to move anything if both are NULL and len is 0
+		return (0);
 	if (dst > src)
 	{
 		i = (int)len - 1;

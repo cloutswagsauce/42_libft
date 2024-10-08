@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lfaria-m <lfaria-m@student.42lausanne.ch>    +#+  +:+       +#+      */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/04 16:44:29 by lfaria-m          #+#    #+#             */
-/*   Updated: 2024/10/04 16:44:32 by lfaria-m         ###   ########.ch       */
+/*   Created: 2024/10/08 09:37:27 by lfaria-m          #+#    #+#             */
+/*   Updated: 2024/10/08 09:38:27 by lfaria-m         ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,11 @@ size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
 char			*ft_strcat(char *s1, const char *s2);
 char			*ft_strncat(char *s1, const char *s2, size_t n);
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
-void 			*ft_calloc(size_t count, size_t size);
+void			*ft_calloc(size_t count, size_t size);
 char			*ft_strdup(const char *s1);
+char			*ft_substr(char const *s, unsigned int start, size_t len);
+char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strtrim(char const *s1, char const *set);
+char			**ft_split(char const *s, char c);
 
 #endif

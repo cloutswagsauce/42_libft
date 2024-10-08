@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lfaria-m <lfaria-m@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lfaria-m <lfaria-m@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/02 22:23:52 by lfaria-m          #+#    #+#             */
-/*   Updated: 2024/10/03 18:00:43 by lfaria-m         ###   ########.fr       */
+/*   Created: 2024/10/08 09:36:46 by lfaria-m          #+#    #+#             */
+/*   Updated: 2024/10/08 09:36:46 by lfaria-m         ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	if (!*little)
 		return ((char *)(big));
-
 	i = 0;
 	while (i < len && big[i])
 	{
@@ -28,7 +27,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		{
 			j ++;
 			if (!little[j])
-				return ((char *)big + i); 
+				return ((char *)big + i);
 		}
 		i ++;
 	}
