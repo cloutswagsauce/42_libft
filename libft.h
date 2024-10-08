@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lfaria-m <lfaria-m@student.42lausanne.ch>    +#+  +:+       +#+      */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 09:40:54 by lfaria-m          #+#    #+#             */
-/*   Updated: 2024/10/08 09:40:54 by lfaria-m         ###   ########.ch       */
+/*   Created: 2024/10/08 17:47:16 by lfaria-m          #+#    #+#             */
+/*   Updated: 2024/10/08 17:47:33 by lfaria-m         ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <stddef.h>
 # include <stdlib.h>
+# include <fcntl.h>
+# include <unistd.h>
 
 int				ft_isascii(int c);
 int				ft_isprint(int c);
@@ -47,4 +49,11 @@ char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
 char			**ft_split(char const *s, char c);
 char			*ft_itoa(int n);
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void			ft_striteri(char *s, void (*f)(unsigned int, char*));
+void			ft_putchar_fd(char c, int fd);
+void			ft_putstr_fd(char *s, int fd);
+void			ft_putendl_fd(char *s, int fd);
+void			ft_putnbr_fd(int n, int fd);
+
 #endif

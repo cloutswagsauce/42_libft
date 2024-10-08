@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lfaria-m <lfaria-m@student.42lausanne.ch>    +#+  +:+       +#+      */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 17:48:56 by lfaria-m          #+#    #+#             */
-/*   Updated: 2024/10/08 17:48:59 by lfaria-m         ###   ########.ch       */
+/*   Created: 2024/10/08 17:47:46 by lfaria-m          #+#    #+#             */
+/*   Updated: 2024/10/08 17:48:10 by lfaria-m         ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t	i;
-	size_t	j;
+	write(fd, &c, 1);
+}
 
-	if (!*little)
-		return ((char *)(big));
-	i = 0;
-	while (i < len && big[i])
+void	ft_putnbr_fd(int n, int fd)
+{
+	if (n == -2147483648)
 	{
-		j = 0;
-		while (big[i + j] == little[j] && i + j < len)
-		{
-			j ++;
-			if (!little[j])
-				return ((char *)big + i);
-		}
-		i ++;
+		ft_putstr_fd("-2147483648", fd);
+		return ;
 	}
-	return (0);
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n = -n;
+	}
+	if (n > 9)
+		ft_putnbr_fd(n / 10, fd);
+	ft_putchar_fd((n % 10) + '0', fd);
 }

@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lfaria-m <lfaria-m@student.42lausanne.ch>    +#+  +:+       +#+      */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 17:48:56 by lfaria-m          #+#    #+#             */
-/*   Updated: 2024/10/08 17:48:59 by lfaria-m         ###   ########.ch       */
+/*   Created: 2024/10/08 14:32:13 by lfaria-m          #+#    #+#             */
+/*   Updated: 2024/10/08 14:43:39 by lfaria-m         ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t	i;
-	size_t	j;
+	int		i;
 
-	if (!*little)
-		return ((char *)(big));
 	i = 0;
-	while (i < len && big[i])
+	while (*s)
 	{
-		j = 0;
-		while (big[i + j] == little[j] && i + j < len)
-		{
-			j ++;
-			if (!little[j])
-				return ((char *)big + i);
-		}
+		f(i, s);
 		i ++;
+		s ++;
 	}
-	return (0);
 }
