@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lfaria-m <lfaria-m@student.42lausanne.ch>    +#+  +:+       +#+      */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 09:37:27 by lfaria-m          #+#    #+#             */
-/*   Updated: 2024/10/08 09:38:27 by lfaria-m         ###   ########.ch       */
+/*   Created: 2024/10/08 09:40:54 by lfaria-m          #+#    #+#             */
+/*   Updated: 2024/10/08 09:40:54 by lfaria-m         ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,5 @@ char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
 char			**ft_split(char const *s, char c);
-
+char			*ft_itoa(int n);
 #endif
