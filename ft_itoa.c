@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lfaria-m <lfaria-m@student.42lausanne.ch>    +#+  +:+       +#+      */
+/*   By: lfaria-m <lfaria-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 18:07:43 by lfaria-m          #+#    #+#             */
-/*   Updated: 2024/10/08 18:07:48 by lfaria-m         ###   ########.ch       */
+/*   Updated: 2024/10/11 12:57:37 by lfaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_digit(int n)
+static int	count_digit(int n)
 {
 	int	digit_count;
 
@@ -27,7 +27,7 @@ int	count_digit(int n)
 	return (digit_count);
 }
 
-char	*handle_zero(void)
+static char	*handle_zero(void)
 {
 	char	*result;
 
@@ -39,7 +39,7 @@ char	*handle_zero(void)
 	return (result);
 }
 
-char	*handle_min(int n)
+static char	*handle_min(int n)
 {
 	char	*min;
 	int		i;
@@ -58,7 +58,7 @@ char	*handle_min(int n)
 	return (min);
 }
 
-char	*handle_fill(int digit_count, int n, char *result, int is_negative)
+static char	*handle_fill(int digit_count, int n, char *result, int is_negative)
 {
 	while (digit_count >= 0 && n)
 	{
