@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lfaria-m <lfaria-m@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*   By: lfaria-m <lfaria-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 18:34:58 by lfaria-m          #+#    #+#             */
-/*   Updated: 2024/10/08 18:34:58 by lfaria-m         ###   ########.ch       */
+/*   Updated: 2024/10/09 16:37:20 by lfaria-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,7 @@ static int	fill_result(char **result, const char *s, char c)
 				while (i >= 0)
 					free(result[i--]);
 				free(result);
+				return (0);
 			}
 			s += ft_strlen(result[i++]);
 		}

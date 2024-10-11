@@ -2,7 +2,12 @@ NAME = libft.a
 
 SRCS = $(wildcard ft_*.c)
 
+SRCS_BONUS = $(wildcard ft_*bonus.c)
+
+
 OBJS = $(SRCS:.c=.o)
+
+BONUS_OBJS = $(SRCS_BONUS:.c=.o)
 
 CC = gcc
 
@@ -19,12 +24,15 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
+bonus: $(OBJS) $(BONUS_OBJS)
+	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
+
 
 %.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
 	$(RM) $(NAME)
