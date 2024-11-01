@@ -12,22 +12,15 @@
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strdup(char *s1)
 {
 	char	*result;
-	int		s_len;
-	int		i;
+	size_t	len;
 
-	s_len = ft_strlen(s1);
-	result = malloc(sizeof(char) * s_len + 1);
+	len = ft_strlen(s1);
+	result = (char *) malloc(sizeof(char) * (len + 1));
 	if (!result)
 		return (0);
-	i = 0;
-	while (i < s_len && s1[i])
-	{
-		result[i] = s1[i];
-		i ++;
-	}
-	result[i] = '\0';
+	ft_memmove(result, s1, len + 1);
 	return (result);
 }
